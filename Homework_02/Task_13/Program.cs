@@ -4,7 +4,7 @@
     {
         Console.WriteLine("Третьей цифры нет");
     }
-    else Console.WriteLine($"Третья цифра " + num[2]);//вывести третий символ строки
+    else Console.WriteLine($"Третья цифра {num[2]}");//вывести третий символ строки
 }
 
 Console.Write("Введите число: ");
