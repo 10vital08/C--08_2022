@@ -17,5 +17,3 @@ if (number.Length == 5)
     Console.WriteLine(CheckPolyndrom(number));
 }
 else Console.WriteLine("Вы ввели не пятизначное число");
-
-
