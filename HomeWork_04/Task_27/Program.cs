@@ -1,31 +1,24 @@
-﻿int CalculatedSum(string num)
+﻿int CalculatedSum(int num)
 {
-    var array = num.Split("").Select(int.Parse).ToArray();
-    int numberSum = 0;//сумма цифр числа
-    //int[] numberArray = {array.Length};//массив цифр
-
-
-    /*for (int i = 0; i < array.Length; i++)
+    int sum = 0;
+    while (num != 0)
     {
-        array[i] = Convert.ToInt32(num[i]);
-    }*/
-
-    for (int i = 0; i < array.Length; i++)
-    {
-        numberSum += array[i];//суммирование элементов массива, преобразованных в int
+        sum = sum + num % 10;//получаем остаток от деления на 10
+        num = num / 10;//отсекаем последнюю посчитанную цифру
     }
-    return numberSum;
+    return sum;
 }
 
 Console.Write("Введите число: ");
 string number = Console.ReadLine();
-bool isNum = int.TryParse(number, out int result);
+bool isNum = int.TryParse(number, out int result);//определение, является ли числом
+
 int resultSum = 0;//сумма цифр числа
 
-//if (isNum == true)
-//{
-    resultSum = CalculatedSum(number);
+if (isNum == true)
+{
+    resultSum = CalculatedSum(Convert.ToInt32(number));
     Console.WriteLine(resultSum);
-//}
-//else Console.WriteLine("Введите число типа int");
+}
+else Console.WriteLine("Введите число типа int");
 
