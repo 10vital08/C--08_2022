@@ -7,6 +7,8 @@
     return result;
 }
 
+ 
+
 Console.WriteLine("Введите переменные для двух прямых:");
 Console.Write("b1 = ");
 double b1 = Convert.ToInt32(Console.ReadLine());
